@@ -59,6 +59,7 @@
     macros {
         copy_win: copy_win {
             compatible = "zmk,behavior-macro";
+            label = "COPY_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -70,6 +71,7 @@
 
         paste_win: paste_win {
             compatible = "zmk,behavior-macro";
+            label = "PASTE_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -81,6 +83,7 @@
 
         cut_win: cut_win {
             compatible = "zmk,behavior-macro";
+            label = "CUT_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -92,6 +95,7 @@
 
         undo_win: undo_win {
             compatible = "zmk,behavior-macro";
+            label = "UNDO_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -103,6 +107,7 @@
 
         save_win: save_win {
             compatible = "zmk,behavior-macro";
+            label = "SAVE_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -114,6 +119,7 @@
 
         find_win: find_win {
             compatible = "zmk,behavior-macro";
+            label = "FIND_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -125,6 +131,7 @@
 
         goto_def_win: goto_def_win {
             compatible = "zmk,behavior-macro";
+            label = "GOTO_DEF_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -136,6 +143,7 @@
 
         comment_win: comment_win {
             compatible = "zmk,behavior-macro";
+            label = "COMMENT_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -147,6 +155,7 @@
 
         format_win: format_win {
             compatible = "zmk,behavior-macro";
+            label = "FORMAT_WIN";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -160,6 +169,7 @@
 
         copy_term: copy_term {
             compatible = "zmk,behavior-macro";
+            label = "COPY_TERM";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -173,6 +183,7 @@
 
         paste_term: paste_term {
             compatible = "zmk,behavior-macro";
+            label = "PASTE_TERM";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
