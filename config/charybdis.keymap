@@ -45,9 +45,9 @@
             bindings = <&mo>, <&kp>;
         };
 
-        util_esc: util_esc {
+        dev_esc: dev_esc {
             compatible = "zmk,behavior-hold-tap";
-            label = "UTIL_ESC";
+            label = "DEV_ESC";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -167,6 +167,168 @@
                 , <&macro_release &kp LCTRL>;
         };
 
+        ide_action_win: ide_action_win {
+            compatible = "zmk,behavior-macro";
+            label = "IDE_ACTION_WIN";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LCTRL>;
+        };
+
+        recent_win: recent_win {
+            compatible = "zmk,behavior-macro";
+            label = "RECENT_WIN";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LCTRL>;
+        };
+
+        copy_mac: copy_mac {
+            compatible = "zmk,behavior-macro";
+            label = "COPY_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LGUI>;
+        };
+
+        paste_mac: paste_mac {
+            compatible = "zmk,behavior-macro";
+            label = "PASTE_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LGUI>;
+        };
+
+        cut_mac: cut_mac {
+            compatible = "zmk,behavior-macro";
+            label = "CUT_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LGUI>;
+        };
+
+        undo_mac: undo_mac {
+            compatible = "zmk,behavior-macro";
+            label = "UNDO_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp LGUI>;
+        };
+
+        save_mac: save_mac {
+            compatible = "zmk,behavior-macro";
+            label = "SAVE_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LGUI>;
+        };
+
+        find_mac: find_mac {
+            compatible = "zmk,behavior-macro";
+            label = "FIND_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp LGUI>;
+        };
+
+        goto_def_mac: goto_def_mac {
+            compatible = "zmk,behavior-macro";
+            label = "GOTO_DEF_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp B>
+                , <&macro_release &kp LGUI>;
+        };
+
+        comment_mac: comment_mac {
+            compatible = "zmk,behavior-macro";
+            label = "COMMENT_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp SLASH>
+                , <&macro_release &kp LGUI>;
+        };
+
+        format_mac: format_mac {
+            compatible = "zmk,behavior-macro";
+            label = "FORMAT_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LGUI>;
+        };
+
+        ide_action_mac: ide_action_mac {
+            compatible = "zmk,behavior-macro";
+            label = "IDE_ACTION_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LGUI>;
+        };
+
+        recent_mac: recent_mac {
+            compatible = "zmk,behavior-macro";
+            label = "RECENT_MAC";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LGUI>;
+        };
+
         copy_term: copy_term {
             compatible = "zmk,behavior-macro";
             label = "COPY_TERM";
@@ -206,7 +368,7 @@
                 &kp LSHFT   &mt LGUI A    &mt LALT S    &mt LCTRL D   &mt LSHFT F   &kp G         &kp H         &mt LSHFT J   &mt LCTRL K   &mt LALT L    &mt LGUI SEMI &kp APOS
                 &kp LCTRL   &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &kp DEL
                                             &kp ESC      &kp LGUI      &lang_spc LANG1 SPACE   &nav_ent 1 ENTER   &num_tab 2 TAB
-                                                          &sym_bsp 3 BSPC          &util_esc 4 ESC           &mo 5
+                                                          &sym_bsp 3 BSPC          &dev_esc 4 ESC            &mo 5
             >;
         };
 
@@ -243,25 +405,25 @@
             >;
         };
 
-        Util {
+        Dev {
             bindings = <
-                &trans      &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &trans
-                &trans      &copy_win     &paste_win    &cut_win      &undo_win     &save_win     &copy_term    &paste_term   &find_win     &goto_def_win &comment_win  &trans
-                &trans      &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &format_win   &trans        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &trans
-                &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR    &bootloader   &trans        &trans        &trans        &trans        &trans        &trans
-                                            &trans       &trans        &trans                    &trans                    &trans
-                                                          &trans                    &trans                    &trans
+                &trans        &none          &none          &none          &none          &none          &none           &none           &none           &none           &none           &trans
+                &trans        &copy_win      &paste_win     &undo_win      &save_win      &find_win      &copy_mac       &paste_mac      &undo_mac       &save_mac       &find_mac       &trans
+                &trans        &goto_def_win  &comment_win   &format_win    &ide_action_win &recent_win   &goto_def_mac   &comment_mac    &format_mac     &ide_action_mac &recent_mac     &trans
+                &trans        &copy_term     &paste_term    &cut_win       &kp F6         &trans         &kp F6          &trans          &trans          &trans          &trans          &trans
+                                              &trans         &trans         &trans                      &trans                       &trans
+                                                            &trans                      &trans                       &trans
             >;
         };
 
         Mouse {
             bindings = <
-                &trans      &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &trans
-                &trans      &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &trans
-                &trans      &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &trans
-                &trans      &copy_win     &paste_win    &copy_term    &paste_term   &none         &trans        &trans        &trans        &trans        &trans        &trans
-                                            &trans       &trans        &trans                    &trans                    &trans
-                                                          &trans                    &trans                    &trans
+                &trans      &none         &none         &none         &none         &none         &none         &none          &none         &none         &none         &trans
+                &trans      &none         &none         &none         &none         &none         &none         &trans         &msc SCRL_DOWN &msc SCRL_UP  &trans        &trans
+                &trans      &none         &none         &none         &none         &none         &none         &mkp LCLK      &mkp MCLK      &mkp RCLK     &none         &trans
+                &trans      &copy_win     &paste_win    &copy_term    &paste_term   &trans        &copy_mac     &paste_mac     &trans         &trans        &trans        &trans
+                                            &trans       &trans        &trans                    &trans                     &trans
+                                                          &trans                    &trans                     &trans
             >;
         };
     };
