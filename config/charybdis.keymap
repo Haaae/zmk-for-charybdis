@@ -12,7 +12,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
-            lable = "Lang/Space";
+            label = "Lang/Space";
         };
 
         nav_ent: nav_enter {
@@ -22,7 +22,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
-            lable = "Nav/Enter";
+            label = "Nav/Enter";
         };
 
         num_tab: num_tab {
@@ -32,7 +32,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
-            lable = "Num/Tab";
+            label = "Num/Tab";
         };
 
         sym_bsp: sym_bsp {
@@ -42,7 +42,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
-            lable = "Sym/Bsp";
+            label = "Sym/Bsp";
         };
 
         util_esc: util_esc {
@@ -52,7 +52,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
-            lable = "Util/Esc";
+            label = "Util/Esc";
         };
     };
 
